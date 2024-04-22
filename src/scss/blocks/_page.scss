@@ -1,0 +1,41 @@
+.page {
+	position: absolute;
+	z-index: 5;
+	left: 0;
+	right: 0;
+	margin-top: 247px;
+	color: $color-white;
+	text-align: center;
+	&__title {
+		font-size: clamp(1.625rem, -0.364rem + 9.94vw, 6rem);
+		font-weight: 700;
+		line-height: 116px;
+		margin: 0px 0px 38px 0px;
+	}
+
+	&__button {
+		background-color: $color-black;
+		width: clamp(13.75rem, 7.784rem + 29.83vw, 26.875rem);
+		height: clamp(3rem, 1.807rem + 5.97vw, 5.625rem);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0 auto;
+		cursor: pointer;
+
+		transition: transform 0.25s ease-in-out 0s;
+
+		@include any-hover {
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	&__link {
+		color: $color-white;
+		font-size: clamp(1rem, 0.432rem + 2.84vw, 2.25rem);
+		font-weight: 700;
+		line-height: 44px;
+	}
+}

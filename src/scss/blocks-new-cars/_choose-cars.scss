@@ -1,0 +1,172 @@
+.choose-cars {
+	margin-top: clamp(2.5rem, 1.136rem + 6.82vw, 6.25rem);
+	&__wrapper {
+	}
+
+	&__title {
+		text-align: center;
+	}
+
+	&__btn {
+		margin: 70px auto 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		width: 223px;
+		height: 47px;
+		background-color: $color-black;
+		a {
+			color: $color-white;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 130%;
+		}
+	}
+}
+.tabs {
+	&__btn {
+		margin-top: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: clamp(1.25rem, 0.139rem + 5.56vw, 5rem);
+		@media (max-width: 585px) {
+			align-items: stretch;
+		}
+	}
+
+	&__btn-item {
+		cursor: pointer;
+		font-size: clamp(0.875rem, 0.648rem + 1.14vw, 1.5rem);
+		font-weight: 700;
+		line-height: 29px;
+
+		&.color-active {
+			color: $color-blue;
+		}
+
+		@media (max-width: 585px) {
+			width: 131px;
+		}
+	}
+
+	&__content {
+		margin-top: clamp(2.5rem, 1.136rem + 6.82vw, 6.25rem);
+		display: none;
+		grid-template-columns: repeat(4, 270px);
+		grid-auto-rows: 1fr;
+		justify-content: space-between;
+		gap: clamp(2.5rem, 1.136rem + 6.82vw, 6.25rem) 40px;
+		animation-duration: 0.5s;
+		animation-fill-mode: both;
+		animation-name: fade;
+
+		&.tabs-active {
+			display: grid;
+			animation-name: fadeIn;
+		}
+
+		@media (max-width: 1240px) {
+			grid-template-columns: repeat(3, 1fr);
+			justify-content: space-evenly;
+		}
+	}
+
+	&__content-item {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__content-img {
+		display: block;
+
+		img {
+			@media (max-width: 1240px) {
+				width: 100%;
+			}
+		}
+	}
+
+	&__content-body {
+		display: block;
+		border: 1px solid rgb(0, 102, 255);
+		padding: 10px;
+		border-top: 0;
+		border-bottom: 0;
+		flex: 1 1 auto;
+
+		div:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__content-mark {
+		padding-top: 20px;
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 29px;
+	}
+
+	&__content-price {
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 130%;
+	}
+
+	&__content-installment-plan {
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 29px;
+		padding-bottom: 20px;
+	}
+
+	&__content-link {
+		border: 1px solid rgb(0, 102, 255);
+	}
+
+	&__content-details {
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 130%;
+		color: $color-blue;
+		padding: 2px 0;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fade {
+	from {
+		height: 0;
+		opacity: 0;
+	}
+	to {
+		height: auto;
+		opacity: 1;
+	}
+}
+
+@include laptop {
+	.tabs {
+		&__content {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+}
+
+@include mobile-wide {
+	.tabs {
+		&__content {
+			grid-template-columns: 1fr;
+		}
+	}
+}

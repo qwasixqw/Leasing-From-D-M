@@ -1,0 +1,57 @@
+html,
+body {
+	height: 100%;
+	width: 100%;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: Inter;
+	font-weight: 700;
+	font-size: 16px;
+	user-select: none;
+	overflow-x: hidden;
+}
+
+.container {
+	margin: auto;
+	max-width: 1240px;
+	padding: 0 20px;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.header {
+}
+
+.main {
+	flex: 1 1 auto;
+}
+
+.footer {
+}
+
+.section-title {
+	font-size: clamp(1.5rem, 0.818rem + 3.41vw, 3rem);
+	font-weight: 700;
+	line-height: clamp(1.875rem, 1.08rem + 3.98vw, 3.625rem);
+}
+
+.link-active {
+	color: $color-blue !important;
+}
+
+.none {
+	display: none !important;
+}
+
+.body-overflow {
+	overflow: hidden;
+}

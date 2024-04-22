@@ -1,0 +1,87 @@
+.header {
+	background-color: $color-black;
+	padding: 40px 0px 45px 0px;
+
+	&__row {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		gap: 20px;
+	}
+
+	&__logo {
+		width: 83px;
+		height: 55px;
+	}
+
+	&__nav {
+	}
+
+	&__burger {
+		display: none;
+	}
+}
+.header-main {
+	background-color: transparent;
+	position: absolute;
+	z-index: 500;
+	left: 0;
+	right: 0;
+}
+
+.nav {
+	height: 100%;
+	&__row {
+		display: flex;
+		gap: 35px;
+	}
+
+	&__item {
+		position: relative;
+		display: inline-block;
+		padding-bottom: 5px;
+		cursor: pointer;
+
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 0;
+			height: 2px;
+			background-color: $color-white;
+			transition: width 0.3s ease;
+		}
+
+		@include any-hover {
+			&:hover::before {
+				width: 100%; // Увеличение ширины при наведении
+			}
+		}
+	}
+
+	&__link {
+		color: $color-white;
+	}
+}
+
+@include laptop {
+	.header {
+		&__burger {
+			display: block;
+			cursor: pointer;
+			position: relative !important;
+			z-index: 1000 !important;
+			img {
+				width: 50px;
+				height: 50px;
+			}
+		}
+	}
+
+	.nav {
+		&__row {
+			display: none;
+		}
+	}
+}

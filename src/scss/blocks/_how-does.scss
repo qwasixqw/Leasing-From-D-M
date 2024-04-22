@@ -1,0 +1,60 @@
+.how-does {
+	margin-top: $margin-top-clamp;
+
+	&__wrapper {
+		max-width: 600px;
+		margin: auto;
+	}
+
+	&__title {
+	}
+
+	&__descr {
+		margin-top: $margin-top-clamp-item;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 130%;
+	}
+
+	&__suptitle {
+		margin-top: $margin-top-clamp-item;
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 29px;
+	}
+
+	&__column {
+		margin-top: $margin-top-clamp-item;
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+	}
+
+	&__item {
+		display: flex;
+		gap: clamp(1.25rem, -2.159rem + 17.05vw, 8.75rem);
+		align-items: center;
+	}
+
+	&__number {
+		display: inline-block;
+		min-width: 100px;
+		img {
+			width: 100px;
+			height: 100px;
+		}
+	}
+
+	&__text {
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 130%;
+	}
+
+	&__comment {
+		margin-top: clamp(2.5rem, 1.648rem + 4.26vw, 4.375rem);
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 130%;
+	}
+}

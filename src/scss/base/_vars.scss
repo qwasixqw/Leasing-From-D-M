@@ -1,0 +1,15 @@
+$color-white: #fff;
+$color-blue: #0066FF;
+$color-black: #151515;
+$color-gray: #E8E8E8;
+
+$breakpoint-laptop-L: 1200px;
+$breakpoint-laptop: 1024px;
+$breakpoint-tablet: 768px;
+$breakpoint-mobile-wide: 565px;
+$breakpoint-mobile-L: 425px;
+$breakpoint-mobile-M: 375px;
+$breakpoint-mobile-S: 320px;
+
+$margin-top-clamp: clamp(3.125rem, 0.284rem + 14.2vw, 9.375rem);
+$margin-top-clamp-item: clamp(1.875rem, 1.307rem + 2.84vw, 3.125rem);

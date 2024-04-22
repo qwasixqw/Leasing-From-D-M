@@ -1,0 +1,47 @@
+.slider-page {
+	&__swiper {
+	}
+
+	&__wrapper {
+		filter: brightness(70%);
+	}
+
+	&__slide {
+		min-height: 100vh;
+		img {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			object-fit: cover;
+		}
+	}
+
+	&__pagination {
+		margin-bottom: 50px;
+	}
+}
+
+.swiper-pagination-bullet {
+	width: clamp(2rem, -0.5rem + 12.5vw, 7.5rem) !important;
+	height: 3px !important;
+	background-color: rgb(55, 55, 55) !important;
+	border-radius: 0px !important;
+	opacity: 1 !important;
+	margin: 0 15px !important;
+}
+.swiper-pagination-bullet-active {
+	background-color: $color-white !important;
+	height: 5px !important;
+}
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.swiper-pagination {
+}
+
+@include tablet {
+
+}

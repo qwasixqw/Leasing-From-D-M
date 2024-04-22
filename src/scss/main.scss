@@ -1,0 +1,11 @@
+/* Base */
+@import "./base/reset";
+@import "./base/vars";
+@import './base/fontsAutoGen';
+@import "./base/base";
+@import "./base/mixin-media";
+
+/* Blocks */
+@import "./blocks/*.scss";
+@import "./blocks-contacts/*.scss";
+@import "./blocks-new-cars/*.scss";

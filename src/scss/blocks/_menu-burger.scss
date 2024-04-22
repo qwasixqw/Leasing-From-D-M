@@ -1,0 +1,32 @@
+.menu-burger {
+	position: absolute;
+	top: 0;
+	left: -100%;
+	z-index: 100;
+	min-height: 100vh;
+	width: 100%;
+	background-color: $color-gray;
+	transition: left 0.15s ease-in-out 0s;
+
+	&.active-menu-burger {
+		left: 0%;
+	}
+
+	&__row {
+		padding-top: 120px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: clamp(1.875rem, 1.193rem + 3.41vw, 3.75rem);
+	}
+
+	&__item {
+	}
+
+	&__link {
+		font-size: clamp(1.5rem, 1.227rem + 1.36vw, 2.25rem);
+		font-weight: 700;
+		line-height: 56px;
+		color: $color-black;
+	}
+}
